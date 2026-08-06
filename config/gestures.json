@@ -1,0 +1,68 @@
+{
+  "gestures": {
+    "cursor_move": {
+      "id": 1,
+      "name": "cursor_move",
+      "description": "Open Hand - Move Cursor",
+      "finger_state": [1, 1, 1, 1, 1],
+      "action": "move_cursor",
+      "priority": 1
+    },
+    "scroll_smart": {
+      "id": 5,
+      "name": "scroll_smart",
+      "description": "Index Pointing - Joystick Scroll (Move Up/Down)",
+      "finger_state": [0, 1, 0, 0, 0],
+      "action": "scroll_smart",
+      "priority": 2
+    },
+    "drag_middle": {
+      "id": 4,
+      "name": "drag_middle",
+      "description": "Thumb + Index (Pinch) - Hold/Drag",
+      "finger_state": [1, 1, 0, 0, 0],
+      "action": "drag_middle",
+      "priority": 2
+    },
+    "refresh_app": {
+      "id": 7,
+      "name": "refresh_app",
+      "description": "3 Fingers - Refresh (F5)",
+      "finger_state": [0, 1, 1, 1, 0],
+      "action": "refresh",
+      "priority": 2,
+      "parameters": {
+        "cooldown": 2.0
+      }
+    },
+    "left_click": {
+      "id": 2,
+      "name": "left_click",
+      "description": "Fist (Closed Hand) - Left Click",
+      "finger_state": [0, 0, 0, 0, 0],
+      "action": "left_click",
+      "priority": 2,
+      "parameters": {
+        "cooldown": 0.5
+      }
+    },
+    "double_click": {
+      "id": 3,
+      "name": "double_click",
+      "description": "Peace Sign (Index + Middle) - Double Click",
+      "finger_state": [0, 1, 1, 0, 0],
+      "action": "double_click",
+      "priority": 2,
+      "parameters": {
+        "cooldown": 1.0
+      }
+    }
+  },
+  "gesture_sequences": {},
+  "validation": {
+    "min_confidence": 0.6,
+    "min_gesture_frames": 2,
+    "max_transition_time": 0.2,
+    "enable_sequence_detection": false
+  }
+}

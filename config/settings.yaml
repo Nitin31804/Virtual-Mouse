@@ -1,0 +1,78 @@
+# Camera Settings
+camera:
+  device_id: 0
+  width: 320
+  height: 240
+  fps: 30
+  flip_horizontal: true
+  # Note: Brightness/Contrast usually require hardware support. 
+  # If the app crashes or ignores these, comment them out.
+  brightness: 0.5
+  contrast: 0.5
+
+# Hand Detection Settings
+hand_detection:
+  model_complexity: 0    # 0=Light (fast), 1=Full (balanced)
+  min_detection_confidence: 0.6
+  min_tracking_confidence: 0.5
+  max_num_hands: 1
+  static_image_mode: false
+
+# Mouse Control Settings
+mouse:
+  # Smoothing: Lower = Smoother cursor (less jitter) but more lag.
+  # Higher = Faster response but more jitter. Recommended: 0.2 - 0.5
+  smoothing_factor: 0.4 
+  frame_margin: 0.25  # Increase to reach edges of screen more easily
+  scroll_sensitivity: 50
+  double_click_threshold: 0.3  # Max time (seconds) between clicks to count as double
+  drag_threshold: 0.15
+  sensitivity_x: 2.0
+  sensitivity_y: 2.0
+  enable_acceleration: true
+  acceleration_factor: 1.5
+
+# Gesture Recognition Settings
+gestures:
+  activation_distance: 0.05
+  hold_duration: 0.5      # Reduced from 1.0 for snappier feel
+  cooldown_period: 0.5
+  gesture_buffer_size: 5
+  confidence_threshold: 0.6
+
+# UI Display Settings
+ui:
+  show_fps: true
+  show_landmarks: true
+  show_gesture_info: true
+  show_hand_box: true
+  show_cursor_pos: false
+  overlay_opacity: 0.6
+  display_scale: 1.0
+  font_scale: 0.8
+  color_scheme: "dark"  # Options: dark, light, blue, green
+
+# Performance Settings
+performance:
+  use_gpu: false          # Keep false for standard MediaPipe Python builds
+  enable_caching: true
+  cache_size: 100
+  frame_skip: 0
+  enable_multithreading: true
+
+# Application Settings
+app:
+  debug_mode: false
+  log_level: "INFO"
+  auto_start: true
+  calibration_required: true
+  hotkey_enable: "ctrl+shift+m"
+  hotkey_calibrate: "ctrl+shift+c"
+  hotkey_exit: "ctrl+shift+q"
+
+# Calibration Settings
+calibration:
+  samples_required: 30
+  auto_calibrate: true
+  save_calibration: true
+  calibration_timeout: 10
