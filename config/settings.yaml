@@ -1,8 +1,8 @@
 # Camera Settings
 camera:
   device_id: 0
-  width: 320
-  height: 240
+  width: 640
+  height: 480
   fps: 30
   flip_horizontal: true
   # Note: Brightness/Contrast usually require hardware support. 
@@ -12,8 +12,8 @@ camera:
 
 # Hand Detection Settings
 hand_detection:
-  model_complexity: 0    # 0=Light (fast), 1=Full (balanced)
-  min_detection_confidence: 0.6
+  model_complexity: 1    # 0=Light (fast), 1=Full (balanced)
+  min_detection_confidence: 0.5
   min_tracking_confidence: 0.5
   max_num_hands: 1
   static_image_mode: false
@@ -22,8 +22,8 @@ hand_detection:
 mouse:
   # Smoothing: Lower = Smoother cursor (less jitter) but more lag.
   # Higher = Faster response but more jitter. Recommended: 0.2 - 0.5
-  smoothing_factor: 0.4 
-  frame_margin: 0.25  # Increase to reach edges of screen more easily
+  smoothing_factor: 0.8 
+  frame_margin: 0.10  # Decrease to reach edges of screen more easily
   scroll_sensitivity: 50
   double_click_threshold: 0.3  # Max time (seconds) between clicks to count as double
   drag_threshold: 0.15
